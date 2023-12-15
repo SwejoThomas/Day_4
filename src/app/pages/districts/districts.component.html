@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row" id="districts">
+      @for(item of districts;track item.id){
+          <div class="card m-3" style="width: 18rem;">
+            <a [routerLink]="['/district',item.id]">
+            <img src="{{item.image}}" class=" img1 card-img-top" alt="..."/></a>
+            <div class="card-body">
+              <h5  style="text-align: center;" class="card-title">{{item.title}}</h5>
+                <p class="card-text">{{item.content| slice:0:200}}...seemore</p>
+                 
+            </div>
+      </div>
+    }
+    </div>
+  </div>
